@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="conteudo">
+    <NavBar v-on:click="open" />
+    <PageContent  />
+    <MenuLateralMobile v-on:click="close" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from "./components/NavBar.vue";
+import PageContent from "./components/PageContent.vue";
+import MenuLateralMobile from "./components/MenuLateralMobile.vue"
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    NavBar,
+    PageContent,
+    MenuLateralMobile
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body{
+  font-family: "Manrope", sans-serif;
+  src: url('./assets/fonts/Epilogue-VariableFont_wght.ttf');
+  font-style: normal;
+  background-color: hsl(0, 0%, 98%); 
+}
+
 </style>
