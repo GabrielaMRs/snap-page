@@ -32,31 +32,35 @@ export default {
 <style lang="scss">
 .content {
   display: flex;
-  padding: 30px 150px;
+  padding: 0 100px;
   justify-content: space-around;
   .esquerda {
     display: flex;
     flex-direction: column;
-    width: 475px;
+    max-height: 550px;
+    height: 100%;
     h1 {
-      padding-top: 90px;
-      font-size: 65px;
+      padding-top: 50px;
+      font-size: 70px;
+      width: 420px;
     }
     .text {
       font-size: 18px;
       color: hsl(0, 0%, 41%);
       line-height: 30px;
       width: 450px;
-      padding: 50px 0;
+      padding: 40px 0;
+      text-align: justify;
     }
     .learn-more {
       background-color: hsl(0, 0%, 8%);
       border-radius: 15px;
-      border: none;
+      border: 1px solid hsl(0, 0%, 8%);
       font-size: 20px;
       padding: 20px 30px;
       color: hsl(0, 0%, 98%);
       font-weight: 700;
+      transition: all 0.6s ease;
       cursor: pointer;
       width: 200px;
       &:hover {
@@ -68,15 +72,18 @@ export default {
     }
 
     .clients {
-      padding-top: 100px;
+      padding-top: 80px;
       display: flex;
+      width: 100%;
       justify-content: space-between;
+      align-items: center;
+      gap: 10px;
     }
   }
   .direita {
-    height: 625px;
+    height: 550px;
     .image-hero {
-      max-height: 100%;
+      height: 100%;
     }
   }
 }
